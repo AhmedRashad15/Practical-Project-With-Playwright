@@ -1,0 +1,15 @@
+{
+    "validLogin": {
+        "emailAddress": "test15@qc.com",
+        "password": "Test@1234"
+    },
+    "invalidLogin": {
+        "emailAddress": "invaliduser@qc.com",
+        "password": "invalidpassword"
+    },
+    "emptyCredentials": {
+        "emailAddress": "",
+        "password": ""
+    }
+   
+}

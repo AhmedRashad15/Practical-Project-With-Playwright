@@ -1,0 +1,18 @@
+{
+    "validProduct":{
+
+    "productName":"Blue Top",
+    "productCategory":"Tops",
+    "price":"Rs.500",
+    "availability":"In Stock",
+    "brand":"Polo"}
+    ,
+    "invalidProduct":
+    {
+    "productName":"test",
+    "productCategory":"Tops",
+    "price":"Rs.500",
+    "availability":"In Stock",
+    "brand":"Polo"
+    }
+}
