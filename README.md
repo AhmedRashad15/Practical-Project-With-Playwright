@@ -63,7 +63,6 @@ Bash:
 
 npx playwright show-report
 
-Sure, here's a README file tailored to the screenshot you provided, focusing on a Playwright testing setup:
 
 
 ### Contributing
