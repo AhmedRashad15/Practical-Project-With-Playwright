@@ -7,7 +7,7 @@ import { HomePage } from "../pageObjects/home/HomePage"
 
 
 
-test("Verify All Products and Product Details Page",async({page})=>
+test("Verify that All Products and Product Details Page",async({page})=>
 {
 const homePage=new HomePage(page)
 const productPage= new ProductsPage(page)

@@ -9,6 +9,9 @@
     "@types/node": "^22.10.10"
   },
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "testLogin":"npm run test loginTestCases.spec.ts",
+    "PlaceAnOrder": "npm run test PlaceAnOrder.spec.ts"
+
   }
 }

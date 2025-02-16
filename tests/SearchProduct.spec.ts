@@ -5,7 +5,7 @@ import { ProductData,Product } from "../intefaces/Product.interface"
 import { JsonFileReader } from "./utilites/JsonFileReader"
 
 
-test("Verify Search for existing product name",async({page})=>
+test("Verify search results for existing product ",async({page})=>
     {
         const homePage=new HomePage(page)
         const productPage=new ProductsPage(page)
@@ -25,7 +25,7 @@ test("Verify Search for existing product name",async({page})=>
 
     })
 
-    test("Verify Search for not existing product",async ({page})=>
+    test("Verify search results for non-existing product",async ({page})=>
         {
 
         const homePage=new HomePage(page)
