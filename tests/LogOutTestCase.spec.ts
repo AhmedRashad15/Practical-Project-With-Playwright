@@ -13,6 +13,7 @@ test.beforeEach("Login with Valid Credentials",async ({page})=>
         const homePage=new HomePage(page)
         const loginPage=new LoginPage(page)
         const loginData:LoginTestData=await jsonReader.readJsonFile<LoginTestData>(jsonFilePath)
+        await homePage.goToHomePage()
         await homePage.goToLoginPage()
         await loginPage.login(loginData.validLogin.emailAddress,loginData.validLogin.password)
 

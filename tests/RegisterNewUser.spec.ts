@@ -48,6 +48,7 @@ test("SignUp With Valid Credientials",async ({page})=>
         const reader=new JsonFileReader()
        const userData : RegisterUser= await reader.readJsonFile<RegisterUser>('./tests/data/userData.json')
         // save json file into userData Object
+        await homePage.goToHomePage()
         await homePage.goToLoginPage()
         await expect((await registerPage.getSignUpHeader())).toHaveText("New User Signup!")
         await loginPage.signUpUser(randomUserName,randomEmail)

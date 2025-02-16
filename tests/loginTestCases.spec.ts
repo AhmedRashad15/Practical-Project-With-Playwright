@@ -26,6 +26,7 @@ test("Login With Valid Credentials",async({page})=>
     {
        const homePage= new HomePage(page)
        const loginPage=new LoginPage(page)
+        await homePage.goToHomePage()
         await homePage.goToLoginPage()
         await loginPage.login(loginUserData.validLogin.emailAddress,loginUserData.validLogin.password)
         await expect(await homePage.getDeleteAccountBtn()).toBeVisible()
@@ -35,6 +36,7 @@ test("Login With Valid Credentials",async({page})=>
         {
             const homePage=new HomePage(page)
            const loginPage=new LoginPage(page)
+            await homePage.goToHomePage()
             await homePage.goToLoginPage()
             await expect(await loginPage.getLoginHeaderTextLoc()).toHaveText("Login to your account")
             await loginPage.login(loginUserData.invalidLogin.emailAddress,loginUserData.invalidLogin.password)            
@@ -46,6 +48,7 @@ test("Login With Valid Credentials",async({page})=>
             {
                const  homePage=await new HomePage(page)
                const loginPage=new LoginPage(page)
+                await homePage.goToHomePage()
                 await homePage.goToLoginPage()
                 await expect(await loginPage.getLoginHeaderTextLoc()).toHaveText("Login to your account")
                 await loginPage.login(loginUserData.emptyCredentials.emailAddress,loginUserData.emptyCredentials.password)            

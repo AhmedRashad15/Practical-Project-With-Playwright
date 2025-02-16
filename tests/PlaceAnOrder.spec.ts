@@ -4,7 +4,7 @@ import { LoginPage } from "../pageObjects/authentication/login/LoginPage"
 import { JsonFileReader } from "./utilites/JsonFileReader"
 import { LoginTestData } from "../intefaces/LoginUser.interface"
 import { ProductsPage } from "../pageObjects/products/ProductsPage"
-import { ProductData } from "../intefaces/Product.interface"
+import { Product, ProductData } from "../intefaces/Product.interface"
 import { CartPage } from "../pageObjects/checkOut/CartPage"
 import exp = require("constants")
 import {  PaymentInfo } from "../intefaces/paymentInfo.interface"
@@ -29,9 +29,9 @@ test ("Verify that a logged-in user can successfully place an order using valid 
         await expect(await homePage.getLoggedInLink()).toBeVisible()
         await homePage.goToProductsPage()
 
-        const productData:ProductData=await jsonReader.readJsonFile<ProductData>("./tests/data/productDetails.json")
-        await expect(await productPage.getSpecificProduct(productData.productName)).toBeVisible()
-        await productPage.addProductToCart(productData.productName)
+        const productData:Product=await jsonReader.readJsonFile<Product>("./tests/data/productDetails.json")
+        await expect(await productPage.getSpecificProduct(productData.validProduct.productName)).toBeVisible()
+        await productPage.addProductToCart(productData.validProduct.productName)
 
         await homePage.goToCartPage()
         await expect(await cartPage.getShoppingCartBreadCrumb()).toBeVisible()
