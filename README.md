@@ -39,29 +39,28 @@ Before running the tests, ensure you have the following installed:
   npm install playwright
   npx playwright install
 ### Installation
-Clone the repository:
-Bash
 
-git clone https://[your-repository-url].git 
-Navigate to the project directory:
-Code snippet
-
-cd your-project-name
 Install the dependencies:
 
 npm install
 Running the Tests
 You can run the tests using the following command:
 
+Bash:
+
+npx playwright test
+
 You can also specify a specific test file:
 
 Bash:
+
 npx playwright test tests/file-name
 
 Reporting
 Playwright provides built-in reporting capabilities. After running the tests, you can view the HTML 
 
 Bash:
+
 npx playwright show-report
 
 Sure, here's a README file tailored to the screenshot you provided, focusing on a Playwright testing setup:
